@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Elemental" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-XQ-4XF">
+                                <rect key="frame" x="172" y="209" width="256" height="182"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="160"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KANS OP REGEN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xky-LD-JQe">
+                                <rect key="frame" x="346" y="400" width="137" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.92109142030000002" blue="0.35027680500000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="88%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFj-J0-87l">
+                                <rect key="frame" x="142" y="428" width="52.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDb-70-jV3">
+                                <rect key="frame" x="388.5" y="428.5" width="52.5" height="30"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overzicht" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn2-aw-nVU">
+                                <rect key="frame" x="256" y="514" width="94" height="25"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.92109142030000002" blue="0.35027680500000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUj-jO-seD">
+                                <rect key="frame" x="280" y="50" width="43" height="43"/>
+                                <state key="normal" image="refresh"/>
+                                <connections>
+                                    <action selector="refreshData" destination="BYZ-38-t0r" eventType="touchUpInside" id="lPm-gq-C0p"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1CL-EP-bW6">
+                                <rect key="frame" x="291" y="62" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k51-9B-dLN">
+                                <rect key="frame" x="235" y="122" width="132" height="30"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                <state key="normal" title="Save to CoreData">
+                                    <color key="titleColor" red="1" green="0.92109142030000002" blue="0.35027680500000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveToCoreData" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQX-pI-Sop"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="VOCHTIGHEID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMD-dF-S2P">
+                                <rect key="frame" x="113" y="399" width="123" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.92109142030000002" blue="0.35027680500000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.61445135079630187" blue="0.45264414190713687" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mn2-aw-nVU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3" id="3Ge-SZ-8up"/>
+                            <constraint firstItem="IDb-70-jV3" firstAttribute="top" secondItem="Xky-LD-JQe" secondAttribute="bottom" constant="9" id="4BH-dT-DNU"/>
+                            <constraint firstItem="RFj-J0-87l" firstAttribute="centerX" secondItem="kMD-dF-S2P" secondAttribute="centerX" constant="-6" id="7eC-Cu-1tx"/>
+                            <constraint firstItem="k51-9B-dLN" firstAttribute="centerY" secondItem="kUj-jO-seD" secondAttribute="centerY" constant="65.5" id="8A2-lu-i1L"/>
+                            <constraint firstItem="kUj-jO-seD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1.5" id="AxY-we-Kq7"/>
+                            <constraint firstItem="kMD-dF-S2P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-125.5" id="BC2-PT-rNb"/>
+                            <constraint firstItem="iqc-XQ-4XF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fd3-8u-Jpp"/>
+                            <constraint firstItem="kMD-dF-S2P" firstAttribute="top" secondItem="iqc-XQ-4XF" secondAttribute="bottom" constant="9" id="Jot-D0-0Wm"/>
+                            <constraint firstItem="Xky-LD-JQe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="114.5" id="Rfc-8l-UAl"/>
+                            <constraint firstItem="k51-9B-dLN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="WWo-wi-jMx"/>
+                            <constraint firstItem="Xky-LD-JQe" firstAttribute="top" secondItem="iqc-XQ-4XF" secondAttribute="bottom" constant="9" id="dDh-0T-pbS"/>
+                            <constraint firstItem="iqc-XQ-4XF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="djk-ia-1hs"/>
+                            <constraint firstItem="RFj-J0-87l" firstAttribute="top" secondItem="kMD-dF-S2P" secondAttribute="bottom" constant="9" id="iX0-hS-X2z"/>
+                            <constraint firstItem="1CL-EP-bW6" firstAttribute="top" secondItem="kUj-jO-seD" secondAttribute="bottom" constant="-31" id="jYT-hB-8x7"/>
+                            <constraint firstItem="kMD-dF-S2P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="65" id="lKm-l0-55j"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mn2-aw-nVU" secondAttribute="bottom" priority="750" constant="61" id="rV1-hT-aHz"/>
+                            <constraint firstItem="kUj-jO-seD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="sqN-LM-rZL"/>
+                            <constraint firstItem="1CL-EP-bW6" firstAttribute="centerX" secondItem="kUj-jO-seD" secondAttribute="centerX" id="uAz-Xx-JrD"/>
+                            <constraint firstItem="IDb-70-jV3" firstAttribute="centerX" secondItem="Xky-LD-JQe" secondAttribute="centerX" id="wya-xH-dZb"/>
+                            <constraint firstItem="mn2-aw-nVU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RFj-J0-87l" secondAttribute="bottom" constant="30" id="xhW-CQ-GdQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="lKm-l0-55j"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1CL-EP-bW6" id="rIg-eF-zzI"/>
+                        <outlet property="huidigeKansOpRegenLabel" destination="IDb-70-jV3" id="w4a-M9-9YH"/>
+                        <outlet property="huidigeTempLabel" destination="iqc-XQ-4XF" id="SHi-Jy-neQ"/>
+                        <outlet property="huidigeVochtigheidLabel" destination="RFj-J0-87l" id="mu3-Y7-Mcs"/>
+                        <outlet property="huidigeWeerOverzicht" destination="mn2-aw-nVU" id="Ult-ZC-2Zh"/>
+                        <outlet property="refreshButton" destination="kUj-jO-seD" id="IRU-dd-5Lc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="713" y="180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="refresh" width="43" height="43"/>
+    </resources>
 </document>
